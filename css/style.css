@@ -73,6 +73,24 @@ h2{font-size:clamp(1.9rem,4vw,2.7rem);margin-bottom:1.2rem}
 .price-list b{color:var(--blue)}
 .card .btn{margin-top:.6rem;align-self:flex-start}
 
+/* Planos mensais (nova seção; reutiliza .card, .btn e .reveal) */
+/* Título dos planos (estilo da arte de referência) */
+.plans-title{display:flex;flex-direction:column;align-items:center;font-family:"Alfa Slab One",var(--font-title);font-weight:400;line-height:.95;text-transform:uppercase;text-align:center;margin-bottom:2.5rem;overflow:visible}
+.pt-top{background:var(--white);color:var(--black);font-size:clamp(1.1rem,4.6vw,2.4rem);padding:.25em .8em;letter-spacing:.02em;clip-path:polygon(0 10%,3% 0,10% 7%,22% 0,38% 6%,52% 0,68% 7%,84% 1%,96% 7%,100% 0,99% 90%,93% 100%,80% 93%,64% 100%,48% 94%,33% 100%,18% 93%,7% 100%,0 91%)}
+.pt-main{color:var(--blue);font-size:clamp(3.6rem,16vw,8.5rem);letter-spacing:.01em;margin-top:-.02em;text-shadow:0 0 34px var(--blue-glow);filter:url(#grunge)}
+.pt-sub{position:relative;color:var(--white);font-size:clamp(2.2rem,9.5vw,5rem);letter-spacing:.06em;margin-top:-.5em;transform:rotate(-5deg);-webkit-text-stroke:.12em var(--black);paint-order:stroke fill;filter:url(#grunge)}
+.plans-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem;max-width:900px;margin:0 auto}
+.plan-card{align-items:center;text-align:center;gap:1.1rem;padding:2rem 1.6rem;background:linear-gradient(135deg,var(--card) 55%,rgba(47,128,255,.28))}
+.plan-card h3{font-size:clamp(1.3rem,3vw,1.7rem);letter-spacing:.04em}
+.plan-price{display:flex;align-items:baseline;justify-content:center;gap:.35rem;line-height:1;color:var(--white);font-family:var(--font-title);font-weight:800}
+.card .plan-price{font-size:1rem;color:var(--white)}
+.plan-cur,.plan-cents{font-size:1.5rem}
+.plan-value{font-size:clamp(4rem,9vw,5.5rem);color:var(--blue);text-shadow:0 0 28px var(--blue-glow)}
+.card .plan-benefits{display:grid;gap:.5rem;width:100%;margin:.2rem 0 .6rem}
+.plan-benefits li{border-top:1px solid var(--line);padding-top:.6rem;color:var(--gray);font-weight:600;text-transform:uppercase;font-size:.9rem;letter-spacing:.03em}
+.card.plan-card .btn{align-self:stretch;margin-top:auto;min-height:48px;text-align:center}
+@media (max-width:700px){.plans-grid{grid-template-columns:1fr}}
+
 /* Localização */
 .address{margin-bottom:1.4rem;color:var(--gray)}
 .location-grid iframe{width:100%;height:340px;border:0;border-radius:14px;filter:grayscale(.4) invert(.9) hue-rotate(180deg)}
@@ -90,6 +108,8 @@ h2{font-size:clamp(1.9rem,4vw,2.7rem);margin-bottom:1.2rem}
 .footer-inner nav a:hover{color:var(--blue)}
 .footer-inner .social-row{margin:0}
 .copy{text-align:center;color:var(--gray);font-size:.85rem;margin-top:2rem}
+.dev-credit{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:.8rem;margin-top:1rem}
+.dev-credit .btn{padding:.3rem .8rem;font-size:.8rem;border-radius:6px}
 
 /* WhatsApp flutuante */
 .whatsapp-float{position:fixed;right:18px;bottom:18px;z-index:60;width:58px;height:58px;border-radius:50%;background:#25d366;color:#fff;display:grid;place-items:center;box-shadow:0 6px 20px rgba(0,0,0,.5);transition:transform .2s}
