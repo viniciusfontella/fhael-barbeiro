@@ -90,6 +90,9 @@ h2{font-size:clamp(1.9rem,4vw,2.7rem);margin-bottom:1.2rem}
 .plan-benefits li{border-top:1px solid var(--line);padding-top:.6rem;color:var(--gray);font-weight:600;text-transform:uppercase;font-size:.9rem;letter-spacing:.03em}
 .card.plan-card .btn{align-self:stretch;margin-top:auto;min-height:48px;text-align:center}
 @media (max-width:700px){.plans-grid{grid-template-columns:1fr}}
+/* Títulos "Nossos Serviços" e "Onde estamos" reutilizam .plans-title (mesmo estilo dos planos) */
+.location-title{grid-column:1/-1;margin-bottom:.5rem}
+@media (max-width:520px){.plans-title--wide .pt-main{font-size:clamp(3rem,14vw,8.5rem)}}
 
 /* Localização */
 .address{margin-bottom:1.4rem;color:var(--gray)}
