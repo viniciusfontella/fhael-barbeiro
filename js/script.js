@@ -19,6 +19,13 @@ document.querySelectorAll(".js-whatsapp").forEach(a => a.href = configured ? `ht
 document.querySelectorAll(".js-instagram").forEach(a => a.href = instagramUrl);
 document.querySelectorAll(".js-maps").forEach(a => a.href = mapsUrl);
 
+// Planos: botões abrem o WhatsApp (mesmo número acima) com a mensagem do plano (data-whatsapp-msg)
+document.querySelectorAll(".js-plano-whatsapp").forEach(a => {
+  a.href = configured
+    ? `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(a.dataset.whatsappMsg || "")}`
+    : "#inicio";
+});
+
 // Mostra o número no texto de contato, somente se esse elemento existir na página
 const whatsText = $("#whatsText");
 if (configured && whatsText) whatsText.textContent = whatsappNumber;
